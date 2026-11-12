@@ -1,4 +1,4 @@
-package com.pluralsight;
+package com.pluralsight.example;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

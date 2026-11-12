@@ -1,4 +1,4 @@
-package com.pluralsight;
+package com.pluralsight.example;
 
 public class MyDouble {
     private double value;
