@@ -1,5 +1,6 @@
 package com.pluralsight.cardclass;
 
+import javax.naming.Name;
 import java.util.ArrayList;
 
 public class Hand {
@@ -11,11 +12,13 @@ public class Hand {
 
     // A card is dealt to the Hand and the Hand is responsible to store the card
 
-    public void deal(Card card){
-        cards.add(card);
+    public void addCard(Card card){
+
+        this.cards.add(card);
     }
 
     public int getSize(){
+
         return cards.size();
     }
 
@@ -32,4 +35,35 @@ public class Hand {
         return value;
     }
 
+    public void display(){
+        String results = "";
+        for (int i = 0; i < this.cards.size(); i++){
+            Card c = this.cards.get(i);
+            results += c.getSuit() + c.getValue();
+            if(i != this.cards.size() - 1){
+                results += ", ";
+            }
+        }
+
+        System.out.println(results);
+    }
+
+
+    @Override
+    public String toString(){
+        String results = "";
+        for (int i = 0; i < this.cards.size(); i++){
+            Card c = this.cards.get(i);
+            results += c.getSuit() + c.getValue();
+            if(i != this.cards.size() - 1){
+                results += ", ";
+            }
+        }
+
+        return results;
+    }
+
 }
+
+
+
